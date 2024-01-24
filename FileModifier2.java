@@ -49,29 +49,30 @@ public class FileModifier2 {
                 String[] parts = line.split(",");
                 if (parts[0].equals(id)) {
                     switch (field.toLowerCase()) {
-                        case "id":
+                        case "id" -> {
                             currentPosition = file.getFilePointer() - 4;
                             file.writeBytes(String.format("%-4s", value));
-                            break;
-                        case "name":
+                        }
+                        case "name" -> {
                             currentPosition = file.getFilePointer() - 30;
                             file.writeBytes(String.format("%-30s", value));
-                            break;
-                        case "cgpa":
+                        }
+                        case "cgpa" -> {
                             currentPosition = file.getFilePointer() - 4;
                             file.writeBytes(String.format("%-4.2f", Double.parseDouble(value)));
-                            break;
-                        case "dept":
+                        }
+                        case "dept" -> {
                             currentPosition = file.getFilePointer() - 4;
                             file.writeBytes(String.format("%-4s", value));
-                            break;
-                        case "adv":
+                        }
+                        case "adv" -> {
                             currentPosition = file.getFilePointer() - 5;
                             file.writeBytes(String.format("%-5s", value));
-                            break;
-                        default:
+                        }
+                        default -> {
                             System.out.println("Invalid field to modify.");
                             return;
+                        }
                     }
                     System.out.println("Student modified successfully.");
                     break;
