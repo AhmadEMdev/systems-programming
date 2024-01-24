@@ -32,7 +32,7 @@ public class FileModifier {
     public static void addStudent(String id, String name, double cgpa, String department, String advisorId) {
         try (RandomAccessFile file = new RandomAccessFile("students.txt", "rw")) {
             file.seek(file.length());
-            String studentRecord = String.format("%-4s%-30s%-4.2f%-4s%-5s", id, name, cgpa, department, advisorId);
+            String studentRecord = String.format("%-4s,%-30s,%-4.2f,%-4s,%-5s", id, name, cgpa, department, advisorId);
             file.writeBytes(studentRecord + "\n");
             System.out.println("Student added successfully.");
         } catch (IOException e) {
