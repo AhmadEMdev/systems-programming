@@ -18,15 +18,15 @@ public class FileModifier2 {
         displayAllStudents();
         displayStudentsWithAdvisors();
 
-//        modifyStudent("1111", "dept", "CVLE");
-//        displayAllStudents();
+        modifyStudent("1111", "dept", "CVLE");
+        displayAllStudents();
 
-//        deleteStudent("2222");
-//        displayAllStudents();
+        deleteStudent("2222");
+        displayAllStudents();
 
         displayStudentAndAdvisor("1111");
 
-//        advisorListToFile("TT001");
+        advisorListToFile("TT001");
     }
 
     public static void addStudent(String id, String name, double cgpa, String department, String advisorId) {
