@@ -119,10 +119,7 @@ public class FileModifier2 {
         List<String> lines = getFileContents("students.txt");
         for (String line : lines) {
             String[] parts = line.split(",");
-            String advn = getAdvisorName(parts[4]);
-            //System.out.println(String.format("%s,%s,%s", line, getAdvisorName(parts[4])));
-            System.out.println(String.format("%s,%s,%s", line, advn));
-
+            System.out.printf("%s,%s%n", line, getAdvisorName(parts[4]));
         }
     }
 
@@ -132,7 +129,7 @@ public class FileModifier2 {
         for (String line : lines) {
             String[] parts = line.split(",");
             if (parts[0].equals(id)) {
-                System.out.println(String.format("%s,%s,%s", line, getAdvisorName(parts[4])));
+                System.out.println(String.format("%s,%s", line, getAdvisorName(parts[4])));
                 return;
             }
         }
