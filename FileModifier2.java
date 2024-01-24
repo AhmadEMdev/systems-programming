@@ -6,7 +6,7 @@
 import java.io.*;
 import java.util.*;
 
-public class FileModifier {
+public class FileModifier2 {
 
     private static final int STUDENT_RECORD_SIZE = 52; // Assuming fixed-length records
 
